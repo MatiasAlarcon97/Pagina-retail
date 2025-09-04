@@ -1,0 +1,24 @@
+.form-group{
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 15px;
+    
+}
+
+input[type="email"], input[type="password"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.tittle-up {
+    width: 300px;
+    margin: 300px auto;
+    font-family: Arial, sans-serif;
+}
