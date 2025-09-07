@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesion</title>
     <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/login.js"></script>
 </head>
 <body>
     <div class="formulario">
         <h1>Inicio de sesion</h1>
         <form method="post">
             <div class="usuario">
-                <input type="text" required>
-                <label>Nombre de ususario</label>
+                <label>Dirección de correo electronico</label>
+                <input type="text" id="email" required>
             </div>
             <div class="usuario">
-                <input type="password" required>
+                <input type="password" id="password"required>
                 <label>Contraseña</label>
             </div>
             <div class="recordar">¿Olvido su contraseña?</div>
-            <input type="submit" value="iniciar">
+            <button type="submit" onclick="login()">Iniciar sesión</button>
             <div class="registrarse">
-                Quiero <a href="a">registrarme</a>
+                Quiero <a href="C:\Users\Cetecom\Pagina-retail\proyectoEv1\html\register.html">registrarme</a>
             </div>
         </form>
         <a href="./paginaPrincipal.html">pp</a>
