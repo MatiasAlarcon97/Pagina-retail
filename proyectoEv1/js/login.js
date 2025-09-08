@@ -1,8 +1,7 @@
-import { validator } from './validator.js';
-
 
 
 function login(){
+    event.preventDefault();
     var correo = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
@@ -14,26 +13,38 @@ function login(){
     else{ 
         alert("Para iniciar sesión debe llevar @");   
     }
+
+    console.log("Entrando...");
+    window.location.href = "paginaPrincipal.html";
         
 }
 
 
 let registros=[]
 
-function register(){
-    var name=document.getElementById("names")
-    var last_names=document.getElementById("last_names")
-    var number=document.getElementById("number")
+function register(event){ 
+    event.preventDefault();
+    
+    
+    var name=document.getElementById("names").value
+    var last_names=document.getElementById("last_names").value
+    var number=document.getElementById("number").value
     var correo = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-    validator("email")
-
-    if(name || last_names || number || correo || password ===""){
+    
+    if(!name || !last_names || !number || !correo || !password){
         alert("No pueden haber campos vacios")
-
-    }else{
-        alert("Usuario registrado con exito")
+        return
     }
+     if (correo.includes('@')) {
+            
+            console.log("Correo valido");
+        
+        } else {
+            alert("El correo debe llevar @");
+        }    
+
+    
 
 
     let RegistroNuevo={
@@ -46,8 +57,11 @@ function register(){
     
     registros.push(RegistroNuevo);
 
-    document.getElementById("form_register").reset();
+   document.getElementById("form_register").reset();
+   window.location.href = "Menu.html";
+   console.log("Registro OK, redirigiendo...");
     
 }
+
 
 
