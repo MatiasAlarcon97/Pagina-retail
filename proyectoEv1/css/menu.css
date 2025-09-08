@@ -1,162 +1,226 @@
-/* Estilos generales */
+/* ===== ESTILOS GENERALES ===== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    transition: margin-left 0.3s ease;
-}
-
-/* Barra lateral */
-.sidebar {
-    height: 100%; 
-    width: 0; 
+  }
+  
+  /* ===== CABECERA CON BARRA SUPERIOR ===== */
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: green;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  #cabecera {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Botón abrir menú */
+  .open-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .open-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Barra de búsqueda */
+  #search-bar {
+    display: flex;
+    flex-grow: 1;
+    max-width: 500px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  #search-bar input[type="text"] {
+    flex-grow: 1;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  #search-bar input::placeholder {
+    color: #aaa;
+  }
+  
+  #search-bar button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  #search-bar button:hover {
+    background-color: #145214;
+  }
+  
+  /* Botón Iniciar sesión */
+  #top-right-button {
+    
+    /* Alineado a la derecha con flex */
+  }
+  
+  #top-right-button .btn-productos {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  #top-right-button .btn-login {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #top-right-button .btn-login:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  #top-right-button .btn-login:focus {
+    outline: 2px solid #218838;
+    outline-offset: 2px;
+  }
+  
+  /* ===== MENÚ LATERAL ===== */
+  .sidebar {
+    height: 100%;
+    width: 0;
     position: fixed;
-    z-index: 100;
+    z-index: 2;
     top: 0;
     left: 0;
-    background-color: #3fb688;
-    overflow-x: hidden; 
-    transition: width 0.3s ease;
-}
-
-.sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #ffffff;
-    display: block;
+    background-color: #347c03;
+    overflow-x: hidden;
     transition: 0.3s;
-}
-
-.sidebar a:hover {
-    color: #818181;
-}
-
-/* El botón para cerrar la barra lateral */
-.close-btn {
-    position: absolute;
+    padding-top: 60px;
+  }
+  
+  #overlay {
+    position: fixed;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    background-color: transparent;
-    border: none;
-    color: #818181;
-    cursor: pointer;
-}
-
-/* El botón para abrir la barra lateral */
-.open-btn {
-    font-size: 30px;
-    background-color: #3fb688;
-    color: rgb(255, 255, 255);
-    padding: 15px;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 99;
-}
-
-.open-btn:hover {
-    background-color: #3fb688;
-}
-    
-/* Cuando la barra lateral está abierta */
-.sidebar.open {
-    width: 300px;
-}
-
-/* Encabezado */
-header {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-}
-
-.header-nav .container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.logo-img {
-    width: auto;
-    height: 50px;
-    max-width: 100%;
-    margin-left: auto;
-}
-
-/* Contenedor del perfil */
-.perfil-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.perfil-container h2 {
-    text-align: center;
-    color: #333;
-}
-
-.perfil-container form {
-    display: flex;
-    flex-direction: column;
-}
-
-.perfil-container label {
-    font-size: 16px;
-    margin: 10px 0 5px;
-    color: #555;
-}
-
-.perfil-container input {
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-.perfil-container button {
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.perfil-container button:hover {
-    background-color: #45a049;
-}
-
-.perfil-container .btn-eliminar {
-    background-color: #f44336;
-}
-
-.perfil-container .btn-eliminar:hover {
-    background-color: #e53935;
-}
-
-.perfil-container .btn-volver-dashboard {
-    display: inline-block;
-    background-color: #2196F3;
-    padding: 10px 20px;
-    border-radius: 4px;
-    color: white;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+  }
+  
+  .sidebar a {
+    padding: 10px 15px;
     text-decoration: none;
-}
-
-.perfil-container .btn-volver-dashboard:hover {
-    background-color: #1976D2;
-}
-
-/* Para pantallas pequeñas (móviles) */
-@media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-}
+    font-size: 18px;
+    color: white;
+    display: block;
+  }
+  
+  .sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 36px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* ===== CARRUSEL ===== */
+  .carrusel {
+    width: 600px;
+    height: 400px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .carrusel img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: cambiar 12s infinite;
+    opacity: 0;
+  }
+  
+  .carrusel img:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .carrusel img:nth-child(2) {
+    animation-delay: 4s;
+  }
+  .carrusel img:nth-child(3) {
+    animation-delay: 8s;
+  }
+  
+  /* ANIMACIÓN */
+  @keyframes cambiar {
+    0% {
+      opacity: 0;
+    }
+    8% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 1;
+    }
+    41% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
