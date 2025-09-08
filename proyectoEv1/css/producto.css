@@ -1,0 +1,12 @@
+.productos{
+    display: inline-block;
+    margin: 0 20px 5px 0;
+}
+.productos p{
+    text-align: center;
+}
+
+img {
+    width: 70px;
+    height: 70px;
+}
