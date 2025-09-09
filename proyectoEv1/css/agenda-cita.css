@@ -1,0 +1,76 @@
+.boton {
+  display: inline-block;          /* Para que el padding funcione bien */
+  padding: 12px 25px;             /* Espacio interno */
+  border: 2px solid #4CAF50;      /* Borde */
+  border-radius: 8px;             /* Bordes redondeados */
+  background-color: #ffffff;       /* Fondo blanco */
+  color: #4CAF50;                 /* Color del texto */
+  font-weight: bold;               /* Texto más grueso */
+  text-align: center;
+  cursor: pointer;                 /* Cambia el cursor al pasar por encima */
+  transition: all 0.3s ease;      /* Animación suave */
+}
+
+.boton:hover {
+  background-color: #4CAF50;      /* Cambia fondo al pasar el mouse */
+  color: #ffffff;                 /* Cambia el color del texto */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra ligera */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #4CAF50;
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.card .duracion {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.card .precio {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card button {
+  margin-top: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background-color: #45a049;
+}
+
