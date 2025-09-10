@@ -1,67 +1,76 @@
+// Función para manejar el inicio de sesión
+function login(event) {
+    event.preventDefault(); // Prevenir el envío del formulario y recarga de la página
 
-
-function login(){
-    event.preventDefault();
+    // Obtener los valores del formulario
     var correo = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    if(correo.includes("@")){
-        console.log("Correo valido");
-        
-
-    } 
-    else{ 
-        alert("Para iniciar sesión debe llevar @");   
+    // Validación básica para el correo
+    if (!correo.includes("@")) {
+        alert("El correo debe contener '@'");
+        return; // Detener ejecución si el correo no es válido
     }
 
-    console.log("Entrando...");
-    window.location.href = "paginaPrincipal.html";
-        
+    // Validación básica para la contraseña
+    if (password.trim() === "") {
+        alert("La contraseña no puede estar vacía.");
+        return; 
+    }
+
+    console.log("Correo y contraseña válidos");
+
+    if ("Notification" in window) {
+        if (Notification.permission === "granted") {
+            new Notification("Haz iniciado sesión");
+        } else if (Notification.permission !== "denied") {
+            Notification.requestPermission().then(function(permission) {
+                if (permission === "granted") {
+                    new Notification("Haz iniciado sesión");
+                }
+            });
+        }
+    }
+
+   
+    setTimeout(function() {
+        window.location.href = "Menu.html"; 
+    }, 1500); 
 }
 
+let registros = [];
 
-let registros=[]
+function register(event) {
+    event.preventDefault(); 
 
-function register(event){ 
-    event.preventDefault();
-    
-    
-    var name=document.getElementById("names").value
-    var last_names=document.getElementById("last_names").value
-    var number=document.getElementById("number").value
+    var name = document.getElementById("names").value;
+    var last_names = document.getElementById("last_names").value;
+    var number = document.getElementById("number").value;
     var correo = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-    
-    if(!name || !last_names || !number || !correo || !password){
-        alert("No pueden haber campos vacios")
-        return
+
+    if (!name || !last_names || !number || !correo || !password) {
+        alert("No pueden haber campos vacíos");
+        return;
     }
-     if (correo.includes('@')) {
-            
-            console.log("Correo valido");
-        
-        } else {
-            alert("El correo debe llevar @");
-        }    
 
-    
+    if (!correo.includes('@')) {
+        alert("El correo debe contener '@'");
+        return; 
+    }
 
-
-    let RegistroNuevo={
+    let RegistroNuevo = {
         name: name,
-        last_names:last_names,
-        number:number,
-        correo:correo,
-        password:password
-    } 
-    
+        last_names: last_names,
+        number: number,
+        correo: correo,
+        password: password
+    }
+
     registros.push(RegistroNuevo);
 
-   document.getElementById("form_register").reset();
-   window.location.href = "Menu.html";
-   console.log("Registro OK, redirigiendo...");
-    
+    document.getElementById("form_register").reset();
+
+    window.location.href = "Menu.html";
+    console.log("Registro exitoso, redirigiendo...");
 }
-
-
-

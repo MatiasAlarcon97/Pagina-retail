@@ -235,3 +235,175 @@ body {
         opacity: 0;
     }
 }
+/* Estilos generales para el footer */
+.page-footer {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+}
+
+.page-footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo para la sección de boletín informativo */
+.newsletter-wrapper {
+  background-color: #32b5ad;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.newsletter-container .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.newsletter-container .content form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-container .content .field {
+  margin-right: 10px;
+}
+
+.newsletter-container .content input[type="email"] {
+  padding: 10px;
+  font-size: 14px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.newsletter-container .content button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #32b5ad;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-container .content button:hover {
+  background-color: #32b5ad;
+  color: #fff;
+}
+
+/* Estilo para las redes sociales */
+.footer-social {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-social .social a {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-social .social a:hover {
+  color: #32b5ad;
+}
+
+/* Estilo para las secciones del footer */
+.footer-box {
+  margin-bottom: 20px;
+}
+
+.footer-box p.h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.footer-link {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-link li {
+  margin: 8px 0;
+}
+
+.footer-link li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-link li a:hover {
+  color: #32b5ad;
+}
+
+/* Estilo para los iconos de contacto */
+.footer-box .fa {
+  margin-right: 10px;
+}
+
+/* Estilo para la sección de contacto */
+.footer-box ul li span,
+.footer-box ul li a {
+  font-size: 14px;
+}
+
+.footer-box ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-box ul li a:hover {
+  color: #32b5ad;
+}
+
+/* Estilo para el pie de página (footer bottom) */
+#bottomfooter {
+  background-color: #222;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#bottomfooter .footer .copyright {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+#bottomfooter .footer-custom-block .footer-payment-logo img {
+  max-width: 120px;
+  margin-top: 10px;
+}
+
+/* Estilo para el footer en pantallas pequeñas */
+@media (max-width: 767px) {
+  .footer-content .row {
+    flex-direction: column;
+  }
+
+  .footer-box {
+    text-align: center;
+  }
+
+  .newsletter-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+  }
+
+  .footer-social .social {
+    text-align: center;
+  }
+}
