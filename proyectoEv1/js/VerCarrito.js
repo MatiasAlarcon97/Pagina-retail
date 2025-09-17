@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     listaCarrito.appendChild(itemDiv);
     total += item.precio;
-  });
+  });       
 
   totalCarrito.innerText = `Total: $${total.toLocaleString('es-CL')}`;
 

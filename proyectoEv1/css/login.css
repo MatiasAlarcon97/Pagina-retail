@@ -2,124 +2,124 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Montserrat, sans-serif;
-    background: linear-gradient(150deg, #58D68D, #5c8063);
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(150deg, #145214, #5c8063);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Estilo del contenedor del formulario */
+/* Contenedor principal del formulario */
 .formulario {
     background-color: white;
-    padding: 30px;
+    padding: 40px 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
     text-align: center;
 }
 
-/* Título del formulario */
+/* Título */
 .formulario h1 {
-    font-size: 24px;
+    font-size: 26px;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
-/* Estilos del formulario */
+/* Estructura del formulario */
 .formulario form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    box-sizing: border-box;
+    gap: 20px;
 }
 
-/* Estilo de los campos de texto */
+/* Campo con floating label */
 .usuario {
     position: relative;
+    width: 100%;
+}
+
+.usuario input {
+    width: 100%;
+    padding: 14px 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    background-color: #fdfdfd;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .usuario label {
     position: absolute;
     top: 50%;
-    left: 10px;
-    color: #8a8a8a;
+    left: 12px;
     transform: translateY(-50%);
-    font-size: 16px;
+    font-size: 15px;
+    color: #8a8a8a;
     pointer-events: none;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    background-color: white;
+    padding: 0 4px;
 }
 
-/* Estilo de los inputs */
-.usuario input {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efecto de enfoque en los inputs */
 .usuario input:focus {
     border-color: #58D68D;
-    box-shadow: 0 0 8px rgba(88, 214, 141, 0.5);
+    box-shadow: 0 0 6px rgba(88, 214, 141, 0.4);
 }
 
 .usuario input:focus + label,
 .usuario input:not(:placeholder-shown) + label {
     top: -10px;
-    left: 10px;
+    font-size: 13px;
     color: #58D68D;
-    font-size: 14px;
 }
 
-/* Estilo para el botón de iniciar sesión */
+/* Botón de inicio */
 input[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    background-color: #8cb686;
+    background-color: #58D68D;
     color: white;
+    padding: 12px;
     border: none;
     border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #6fa474;
+    background-color: #4cb57c;
 }
 
-/* Enlace de registro */
-.registrarse {
-    background-color: #c7c6c6;
-    border-radius: 12px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.registrarse a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: 500;
-    transition: text-decoration 0.3s;
-}
-
-.registrarse a:hover {
-    text-decoration: underline;
-}
-
-/* Estilos para el enlace de "¿Olvidó su contraseña?" */
+/* Enlace "¿olvidaste tu contraseña?" */
 .recordar {
-    color: #8a8a8a;
+    text-align: right;
     font-size: 14px;
+    color: #6c757d;
     text-decoration: none;
+    margin-top: -10px;
 }
 
 .recordar:hover {
+    text-decoration: underline;
+}
+
+/* Registro */
+.registrarse {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #444;
+}
+
+.registrarse a {
+    color: #00723f;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.registrarse a:hover {
     text-decoration: underline;
 }
