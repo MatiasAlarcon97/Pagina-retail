@@ -27,9 +27,11 @@
         </form>
     
         <div id="top-right-button">
-            <button id="total-carrito" class="btn-productos" onclick="mostrarTotalCarrito()">🛒
+            <button id="total-carrito" class="btn-productos" onclick="location.href='VerCarrito.html'">
+                🛒
             </button>
-        </div>
+        </div>  
+
         </header>
             
     </nav>
@@ -42,30 +44,35 @@
     </div>  </div>
     
     <h1>Productos</h1>
-    <div class="productos">
-        <img src="../imagenes/CorreaGato.jpg" alt="imagen referencial">
-        <p>Correa gato</p>
-        <p>$5.990</p>
-        <button onclick="añadirAlCarrito(5990)">Añadir al carrito</button>
-    </div>
-    <div class="productos">
-        <img src="../imagenes/ComidaGato.webp" alt="imagen referencial">
-        <p>Comida gato</p>
-        <p>$10.990</p>
-        <button onclick="añadirAlCarrito(10990)">Añadir al carrito</button>
-    </div>
-    <div class="productos">
-        <img src="../imagenes/CajaArenaGato.webp" alt="imagen referencial">
-        <p>Caja arena</p>
-        <p>$20.990</p>
-        <button onclick="añadirAlCarrito(20990)">Añadir al carrito</button>
-    </div>
-    <div class="productos">
-        <img src="../imagenes/JugueteGato.webp" alt="imagen referencial">
-        <p>Juguete</p>
-        <p>$12.990</p>
-        <button onclick="añadirAlCarrito(12990)">Añadir al carrito</button>
-    </div>
+    <!-- Productos.html -->
+<div class="productos">
+  <img src="../imagenes/CorreaGato.jpg" alt="imagen referencial">
+  <p>Correa gato</p>
+  <p>$5.990</p>
+  <button onclick="añadirAlCarrito('Correa para gato', 5990)">Añadir al carrito</button>
+</div>
+
+<div class="productos">
+  <img src="../imagenes/ComidaGato.webp" alt="imagen referencial">
+  <p>Comida gato</p>
+  <p>$10.990</p>
+  <button onclick="añadirAlCarrito('Comida húmeda', 10990)">Añadir al carrito</button>
+</div>
+
+<div class="productos">
+  <img src="../imagenes/CajaArenaGato.webp" alt="imagen referencial">
+  <p>Caja arena</p>
+  <p>$20.990</p>
+  <button onclick="añadirAlCarrito('Caja de arena para gato', 20990)">Añadir al carrito</button>
+</div>
+
+<div class="productos">
+  <img src="../imagenes/JugueteGato.webp" alt="imagen referencial">
+  <p>Juguete</p>
+  <p>$12.990</p>
+  <button onclick="añadirAlCarrito('Juguete interactivo', 12990)">Añadir al carrito</button>
+</div>
+
     
 </body>
 </html>

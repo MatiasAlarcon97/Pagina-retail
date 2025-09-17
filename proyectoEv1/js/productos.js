@@ -1,8 +1,19 @@
 let carrito = [];
 
-function añadirAlCarrito(precio) {
-  carrito.push(precio); // Añadimos el precio al array
+// productos.js
+
+function añadirAlCarrito(nombre, precio) {
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  // Agrega el producto al carrito
+  carrito.push({ nombre, precio });
+
+  // Guarda el carrito actualizado en localStorage
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  alert(`${nombre} ha sido añadido al carrito.`);
 }
+
 
 function mostrarTotalCarrito() {
   // Sumar todos los precios del carrito
